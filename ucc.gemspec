@@ -26,10 +26,21 @@ Gem::Specification.new do |spec|
   # spec.bindir        = "exe"
   spec.executables   = ["ucc"]
   spec.require_paths = ["lib"]
-
-  spec.add_dependency "httparty"
+  spec.add_dependency "tty-prompt" 
   spec.add_dependency "http"
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", ">= 12.3.3"
   spec.add_development_dependency "pry"
 end
+
+#Our gems rely on other gems and we put those here 
+#We run "bundle install after adding" 
+#We have added http gem in this example 
+
+#gemspec 
+  #What other gems depend on. 
+  #Specifies what other gems get installed when you install this gem. 
+
+#gemfile 
+  #specific dependencies for a project. 
+  #Determines what happens when you run bundle install 

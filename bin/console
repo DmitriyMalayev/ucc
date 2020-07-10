@@ -2,6 +2,13 @@
 
 require "bundler/setup"
 require "ucc"
+require "irb"
+
+IRB.start(__FILE__)
+
+
+
+
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -10,9 +17,34 @@ require "ucc"
 # require "pry"
 # Pry.start
 
-response = HTTParty.get('http://yelp.com/')
-body = response.body
-@data = JSON.parse(body)
-require "irb"
+# response = HTTP.auth('http://yelp.com/')
+# body = response.body
+# @data = JSON.parse(body)
 
-IRB.start(__FILE__)
+
+#This is for interacting for classes 
+
+
+
+
+
+
+
+# def business(business_id)
+#     url = "#{API_HOST}#{BUSINESS_PATH}#{business_id}"
+  
+#     response = HTTP.auth("Bearer #{API_KEY}").get(url)
+#     response.parse
+#   end
+
+
+# # Constants, do not change these
+# API_HOST = "https://api.yelp.com"
+# SEARCH_PATH = "/v3/businesses/search"
+# BUSINESS_PATH = "/v3/businesses/"  # trailing / because we append the business id to the path
+
+
+# DEFAULT_BUSINESS_ID = "yelp-san-francisco"
+# DEFAULT_TERM = "dinner"
+# DEFAULT_LOCATION = "San Francisco, CA"
+# SEARCH_LIMIT = 5
