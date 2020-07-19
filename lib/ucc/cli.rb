@@ -3,12 +3,6 @@ prompt = TTY::Prompt.new
 
 module Ucc
     class CLI 
-        attr_reader :prompt  
-        def initialize
-            @prompt = TTY::Prompt.new
-            @input = "" 
-        end 
-
         def start
             puts "Welcome To The Urgent Care Center Finder App".bold  
             puts "What's your name?" 

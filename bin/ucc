@@ -4,7 +4,7 @@ require "bundler/setup"
 require "pry"
 require_relative "../lib/ucc"
 
-Ucc::CLI.new.start  
+Ucc::CLI.new.start   
 
-#Created a new instance of the CLI class and then call an instance method called #start on it.
-#The start method is located in the cli class (cli.rb file) 
+#Created a new instance of the CLI Class and then call an instance method called #start on it.
+#The start method is located in the CLI Class (cli.rb file) 
