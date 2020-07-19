@@ -8,7 +8,7 @@ module Ucc
         @@all = [] 
         def initialize(attributes={})
             attributes.each do |attribute_name, attribute_value|
-                if self.respond_to?("#{attribute_name}")
+                if self.respond_to?("#{attribute_name}=")
                     self.send("#{attribute_name}=", attribute_value) 
                 end 
              end 
@@ -25,14 +25,6 @@ module Ucc
             @@all = UrgentCareCenter.create_from_search_results(location_based_search_results) 
         end
         
-        def details 
-           puts "#{self.name} has #{self.review_count} reviews with an average rating of #{self.rating}." 
-           puts "\nContact Info:" 
-           puts ""
-           puts self.location["display_address"] 
-           puts self.display_phone  
-        end 
-
         def self.all
             @@all  
         end
@@ -40,6 +32,12 @@ module Ucc
         def self.find_by_number(number) 
             puts ""
             UrgentCareCenter.all[number.to_i - 1] 
-        end 
-    end  
+        end
+    end
 end 
+
+# UrgentCareCenter Class Responsibilities 
+    # Describes The Objects That Are Created, Stored and Accessed 
+        # What Are Their Attributes?
+        # How Do We Display Them In A List? 
+        # How Do We Display Details About Them?     

@@ -14,7 +14,7 @@ module Ucc
         puts "https://ultimateelementor.com/docs/get-yelp-api-key/."  
         puts "Once you're done, come back and paste your key in here:"
         
-        @@key = gets.strip 
+        @@key = gets.strip    #stores key 
         return if @@key == "exit"
         File.open(File.expand_path("~/.yelp-api-key"), "w") do |file|
           file.print @@key
@@ -33,3 +33,11 @@ module Ucc
 end 
 
 #JSON.parse(response) provides an array of hashes 
+
+
+# API Class Responsibilities 
+    # Interacts With The Internet To Get Data 
+    # Returns Data As A Ruby Data Structure  (HTTP::Response) 
+#Endpoint is focused on the URL that is used to make a request. 
+
+      

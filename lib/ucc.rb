@@ -1,8 +1,10 @@
 require "ucc/version"
 require "ucc/api"
-require "ucc/cli"
+require "ucc/colorize" 
+require "ucc/cli" 
 require "ucc/urgent_care_center" 
 require "http"  
+
 
 
 module Ucc
